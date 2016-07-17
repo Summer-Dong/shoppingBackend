@@ -1,0 +1,24 @@
+[
+  {
+    "name":"买二赠一",
+    "type":1,
+    "barcodes":[
+      "ITEM00000",
+      "ITEM00001",
+      "ITEM00003",
+      "ITEM00006",
+      "ITEM00008"
+    ]
+  },
+  {
+    "name":"95折",
+    "type":2,
+    "barcodes":[
+      "ITEM00002",
+      "ITEM00004",
+      "ITEM00006",
+      "ITEM00008",
+      "ITEM00009"
+    ]
+  }
+]
