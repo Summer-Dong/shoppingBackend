@@ -1,0 +1,4 @@
+language: java
+script: "gradle clean build"
+jdk:
+   - oraclejdk8
