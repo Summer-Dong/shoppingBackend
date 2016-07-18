@@ -32,4 +32,28 @@ public class Item {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+	public String getBarcode() {
+		return barcode;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public String getSubCategory() {
+		return subCategory;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
 }
