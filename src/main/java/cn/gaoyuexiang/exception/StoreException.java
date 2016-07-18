@@ -1,6 +1,7 @@
 package cn.gaoyuexiang.exception;
 
-public class StoreException extends Exception {
+public class StoreException extends RuntimeException {
+	private static final long serialVersionUID = -3729145228666582077L;
 
 	public StoreException() {
 		super();
