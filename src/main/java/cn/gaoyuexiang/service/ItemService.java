@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ItemService {
 	private SerializeService serializeService;
-	private final String ITEM_DS = "item.json";
+	private final String ITEM_DS = "/item.json";
 
 	@Autowired
 	ItemService(SerializeService serializeService) {
