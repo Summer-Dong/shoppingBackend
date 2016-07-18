@@ -31,6 +31,7 @@ public class ItemServiceTest {
 	}
 
 	@Test
+	@SuppressWarnings("unchecked")
 	public void should_get_one() throws Exception {
 		Item item = new Item();
 		item.setBarcode("ITEM00001");
