@@ -2,10 +2,12 @@ package cn.gaoyuexiang.service;
 
 import cn.gaoyuexiang.model.Item;
 import com.fasterxml.jackson.core.type.TypeReference;
+import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.util.List;
 
+@Service
 public class ItemService {
 	private SerializeService serializeService;
 	private final String ITEM_DS = "item.json";
