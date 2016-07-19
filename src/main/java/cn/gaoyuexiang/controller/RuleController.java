@@ -18,6 +18,7 @@ public class RuleController {
 		this.ruleService = ruleService;
 	}
 
+	@RequestMapping
 	public List<Rule> getRules() {
 		return ruleService.getRules();
 	}
