@@ -2,6 +2,7 @@ package cn.gaoyuexiang.controller.web;
 
 import cn.gaoyuexiang.controller.RuleController;
 import cn.gaoyuexiang.service.RuleService;
+import cn.gaoyuexiang.service.SerializeService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +18,9 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {RuleController.class, RuleService.class})
+@ContextConfiguration(classes = {RuleController.class,
+				RuleService.class,
+				SerializeService.class})
 @WebAppConfiguration
 public class RuleControllerWebTest {
 
