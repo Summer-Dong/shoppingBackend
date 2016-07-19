@@ -1,6 +1,7 @@
 package cn.gaoyuexiang.controller;
 
-import cn.gaoyuexiang.StartBoot;
+import cn.gaoyuexiang.service.ItemService;
+import cn.gaoyuexiang.service.SerializeService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +17,9 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = StartBoot.class)
+@ContextConfiguration(classes = {ItemController.class,
+				ItemService.class,
+				SerializeService.class})
 @WebAppConfiguration
 public class ItemControllerWebTest {
 
