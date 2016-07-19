@@ -1,6 +1,8 @@
-package cn.gaoyuexiang.controller;
+package cn.gaoyuexiang.controller.web;
 
-import cn.gaoyuexiang.service.RuleService;
+import cn.gaoyuexiang.controller.ItemController;
+import cn.gaoyuexiang.service.ItemService;
+import cn.gaoyuexiang.service.SerializeService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,23 +18,25 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {RuleController.class, RuleService.class})
+@ContextConfiguration(classes = {ItemController.class,
+				ItemService.class,
+				SerializeService.class})
 @WebAppConfiguration
-public class RuleControllerWebTest {
+public class ItemControllerWebTest {
 
 	@Autowired
-	private RuleController ruleController;
+	private ItemController itemController;
 
 	private MockMvc mockMvc;
 
 	@Before
 	public void setUp() throws Exception {
-		mockMvc = MockMvcBuilders.standaloneSetup(ruleController).build();
+		mockMvc = MockMvcBuilders.standaloneSetup(itemController).build();
 	}
 
 	@Test
 	public void should_get_ok() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/rules")
+		mockMvc.perform(MockMvcRequestBuilders.get("/item")
 						.accept(MediaType.APPLICATION_JSON_UTF8))
 						.andExpect(status().isOk());
 	}
