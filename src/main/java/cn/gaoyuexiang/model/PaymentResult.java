@@ -26,7 +26,16 @@ public class PaymentResult {
 	}
 
 	public void add(PaymentResult other) {
-
+		if (other.getResultItems() != null) {
+			if (this.resultItems == null) this.resultItems = new ArrayList<>(other.getResultItems());
+			else this.resultItems.addAll(other.getResultItems());
+		}
+		if (other.getThreeForTwoItems() != null) {
+			if (this.threeForTwoItems == null) this.threeForTwoItems = new ArrayList<>(other.getThreeForTwoItems());
+			else if (other.getThreeForTwoItems() != null) this.threeForTwoItems.addAll(other.getThreeForTwoItems());
+		}
+		this.total += other.getTotal();
+		this.sale += other.getSale();
 	}
 
 	@Override
