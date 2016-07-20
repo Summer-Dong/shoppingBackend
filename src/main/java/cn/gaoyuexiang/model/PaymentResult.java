@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PaymentResult {
 	private List<ResultItem> resultItems;
-	private List<NoSaleItem> noSaleItems;
+	private List<ThreeForTwoItem> threeForTwoItems;
 	private double sale;
 	private double total;
 
@@ -12,8 +12,8 @@ public class PaymentResult {
 		return resultItems;
 	}
 
-	public List<NoSaleItem> getNoSaleItems() {
-		return noSaleItems;
+	public List<ThreeForTwoItem> getThreeForTwoItems() {
+		return threeForTwoItems;
 	}
 
 	public double getSale() {
@@ -39,7 +39,7 @@ public class PaymentResult {
 		if (Double.compare(result.getTotal(), getTotal()) != 0) return false;
 		if (getResultItems() != null ? !getResultItems().equals(result.getResultItems()) : result.getResultItems() != null)
 			return false;
-		return getNoSaleItems() != null ? getNoSaleItems().equals(result.getNoSaleItems()) : result.getNoSaleItems() == null;
+		return getThreeForTwoItems() != null ? getThreeForTwoItems().equals(result.getThreeForTwoItems()) : result.getThreeForTwoItems() == null;
 
 	}
 
@@ -48,7 +48,7 @@ public class PaymentResult {
 		int result;
 		long temp;
 		result = getResultItems() != null ? getResultItems().hashCode() : 0;
-		result = 31 * result + (getNoSaleItems() != null ? getNoSaleItems().hashCode() : 0);
+		result = 31 * result + (getThreeForTwoItems() != null ? getThreeForTwoItems().hashCode() : 0);
 		temp = Double.doubleToLongBits(getSale());
 		result = 31 * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(getTotal());

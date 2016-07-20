@@ -5,9 +5,13 @@ public class ResultItem {
 	private String unit;
 	private int amount;
 	private double price;
-	private double save;//判断参加95折的优惠，为0表示未参加
+	private String save;//判断参加95折的优惠，为0表示未参加
 
-	public ResultItem(String name, String unit, int amount, double price, double save) {
+	public ResultItem(String name,
+	                  String unit,
+	                  int amount,
+	                  double price,
+	                  String save) {
 		this.name = name;
 		this.unit = unit;
 		this.amount = amount;
@@ -31,7 +35,7 @@ public class ResultItem {
 		return price;
 	}
 
-	public double getSave() {
+	public String getSave() {
 		return save;
 	}
 }
