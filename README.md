@@ -2,7 +2,12 @@
 ==================================================
 
 > 此作业前后端分离
-> 前端地址：https://github.com/Summer-Dong/shoppingFrontend.git
+>
+> 后端代码地址：https://github.com/Summer-Dong/shoppingFrontend.git
+>
+> 后端启动方法：在IDE中启动`cn.gaoyuexiang.StartBoot`类
+>
+> 前端启动方法：将后端代码启动后，命令行进入项目根目录 -> grunt server
 
 
 ## 需求描述
