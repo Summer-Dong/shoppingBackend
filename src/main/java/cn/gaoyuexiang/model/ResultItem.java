@@ -35,8 +35,8 @@ public class ResultItem {
 		return save;
 	}
 
-	public void setSave(String save) {
-		this.save = save;
+	public void setSave(double save) {
+		this.save = ",节省" + save + "(元)";
 	}
 
 	public void setTotal(double total) {
