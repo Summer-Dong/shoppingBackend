@@ -78,5 +78,37 @@
     "category":"生活用品",
     "subCategory":"水杯",
     "price":39.00
+  },
+  {
+    "barcode":"ITEM00010",
+    "name":"天堂伞",
+    "unit":"把",
+    "category":"生活用品",
+    "subCategory":"伞",
+    "price":79.50
+  },
+  {
+    "barcode":"ITEM00011",
+    "name":"西瓜",
+    "unit":"斤",
+    "category":"食品",
+    "subCategory":"水果",
+    "price":2.00
+  },
+  {
+    "barcode":"ITEM00012",
+    "name":"鼠标",
+    "unit":"个",
+    "category":"电脑配件",
+    "subCategory":"耳机",
+    "price":82.00
+  },
+  {
+    "barcode":"ITEM00013",
+    "name":"成都老酸奶",
+    "unit":"盒",
+    "category":"食品",
+    "subCategory":"奶类",
+    "price":4.00
   }
 ]
