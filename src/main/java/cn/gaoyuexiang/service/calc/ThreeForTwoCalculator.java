@@ -1,9 +1,14 @@
 package cn.gaoyuexiang.service.calc;
 
-import cn.gaoyuexiang.model.*;
+import cn.gaoyuexiang.model.PaymentItem;
+import cn.gaoyuexiang.model.PaymentResult;
+import cn.gaoyuexiang.model.ResultItem;
+import cn.gaoyuexiang.model.ThreeForTwoItem;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ThreeForTwoCalculator implements Calculator {
 	@Override
 	public PaymentResult calculate(List<PaymentItem> paymentItems) {
