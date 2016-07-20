@@ -31,12 +31,14 @@ public class ThreeForTwoCalculator implements Calculator {
 		double total = price * amount - sale;
 		ResultItem resultItem = new ResultItem(item.getItem(), amount);
 		resultItem.setTotal(total);
-		ThreeForTwoItem threeForTwoItem =
-						new ThreeForTwoItem(item.getItem(), giveNumber);
+		if (giveNumber > 0) {
+			ThreeForTwoItem threeForTwoItem =
+							new ThreeForTwoItem(item.getItem(), giveNumber);
+			result.addThreeForTowItem(threeForTwoItem);
+		}
 		result.setTotal(result.getTotal() + total);
 		result.setSale(result.getSale() + sale);
 		result.addResultItem(resultItem);
-		result.addThreeForTowItem(threeForTwoItem);
 	}
 
 	private int getGiveNumber(int amount) {
