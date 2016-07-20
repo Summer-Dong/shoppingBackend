@@ -2,6 +2,8 @@
 ==================================================
 
 
+> 前端地址：https://github.com/Summer-Dong/shoppingFrontend.git
+
 
 ## 需求描述
 
