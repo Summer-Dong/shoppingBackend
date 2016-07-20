@@ -10,9 +10,8 @@ public class ThreeForTwoCalculator implements Calculator {
 		PaymentResult result = new PaymentResult();
 		for (PaymentItem item :
 						paymentItems) {
-			Rule rule = item.getRule();
-			Integer type = rule.getType();
-			if (type == 1) {
+			if (item.getRule() == null ) continue;
+			if (item.getRule().getType() == 1) {
 				addToResult(result, item);
 			}
 		}
