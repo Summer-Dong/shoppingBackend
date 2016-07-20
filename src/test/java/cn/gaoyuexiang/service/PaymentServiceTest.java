@@ -5,7 +5,7 @@ import cn.gaoyuexiang.model.PaymentRequest;
 import cn.gaoyuexiang.model.PaymentResult;
 import cn.gaoyuexiang.service.calc.CostPriceCalculator;
 import cn.gaoyuexiang.service.calc.DiscountCalculator;
-import cn.gaoyuexiang.service.calc.FullOffCalculator;
+import cn.gaoyuexiang.service.calc.ThreeForTwoCalculator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ public class PaymentServiceTest {
 	private PaymentMapper paymentMapper;
 
 	@Mock
-	private FullOffCalculator fullOffCalculator;
+	private ThreeForTwoCalculator threeForTwoCalculator;
 
 	@Mock
 	private DiscountCalculator discountCalculator;
@@ -39,7 +39,7 @@ public class PaymentServiceTest {
 	public void setUp() throws Exception {
 		paymentService = new PaymentService(
 						paymentMapper,
-						fullOffCalculator,
+						threeForTwoCalculator,
 						discountCalculator,
 						costPriceCalculator);
 	}
@@ -51,7 +51,7 @@ public class PaymentServiceTest {
 		ArrayList<PaymentItem> paymentItems = new ArrayList<>();
 
 		when(paymentMapper.map(paymentRequest)).thenReturn(paymentItems);
-		when(fullOffCalculator.calculate(paymentItems))
+		when(threeForTwoCalculator.calculate(paymentItems))
 						.thenReturn(paymentResult);
 		when(discountCalculator.calculate(paymentItems))
 						.thenReturn(paymentResult);

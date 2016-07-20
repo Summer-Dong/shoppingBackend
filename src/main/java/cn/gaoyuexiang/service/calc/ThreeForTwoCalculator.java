@@ -5,7 +5,7 @@ import cn.gaoyuexiang.model.PaymentResult;
 
 import java.util.List;
 
-public class FullOffCalculator implements Calculator {
+public class ThreeForTwoCalculator implements Calculator {
 	@Override
 	public PaymentResult calculate(List<PaymentItem> paymentItems) {
 		return null;
