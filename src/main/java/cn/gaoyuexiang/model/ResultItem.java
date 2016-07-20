@@ -38,8 +38,8 @@ public class ResultItem {
 	}
 
 	public void setSave(double save) {
-		DecimalFormat df = new DecimalFormat("#.00");
-		this.save = ",节省" + df.format(save) + "(元)";
+		DecimalFormat df = new DecimalFormat("#0.00");
+		this.save = "节省" + df.format(save) + "(元)";
 	}
 
 	public void setTotal(double total) {
