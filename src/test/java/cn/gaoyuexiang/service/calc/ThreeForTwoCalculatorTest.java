@@ -2,15 +2,12 @@ package cn.gaoyuexiang.service.calc;
 
 import cn.gaoyuexiang.model.*;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.ArrayList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-@RunWith(MockitoJUnitRunner.class)
 public class ThreeForTwoCalculatorTest {
 
 	private ThreeForTwoCalculator threeForTwoCalculator =
