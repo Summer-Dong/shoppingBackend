@@ -30,20 +30,16 @@ public class PaymentMapper {
 
 		HashMap<String, PaymentItem> paymentItemMap = new HashMap<>();
 
-		paymentRequest.getItems()
-						.stream()
-						.map(item -> {
-							PaymentItem paymentItem = parsePayment(item, allItems);
-							Rule rule = getSaleByBarcode(rules, paymentItem.getItem());
-							paymentItem.setRule(rule);
-							String barcode = paymentItem.getItem().getBarcode();
-							if (paymentItemMap.containsKey(barcode)) {
-								paymentItem.setAmount(paymentItemMap.get(barcode).getAmount() + paymentItem.getAmount());
-								paymentItemMap.put(barcode,paymentItem);
-							} else paymentItemMap.put(barcode, paymentItem);
-							return paymentItem;
-						})
-						.collect(Collectors.toList());
+		paymentRequest.getItems().forEach(item -> {
+			PaymentItem paymentItem = parsePayment(item, allItems);
+			Rule rule = getSaleByBarcode(rules, paymentItem.getItem());
+			paymentItem.setRule(rule);
+			String barcode = paymentItem.getItem().getBarcode();
+			if (paymentItemMap.containsKey(barcode)) {
+				paymentItem.setAmount(paymentItemMap.get(barcode).getAmount() + paymentItem.getAmount());
+				paymentItemMap.put(barcode, paymentItem);
+			} else paymentItemMap.put(barcode, paymentItem);
+		});
 
 		return paymentItemMap.values()
 						.stream()
@@ -52,8 +48,8 @@ public class PaymentMapper {
 
 	}
 
-	private Rule getSaleByBarcode(List<Rule> onSaleInfoes, Item item) {
-		Optional<Rule> first = onSaleInfoes
+	private Rule getSaleByBarcode(List<Rule> rules, Item item) {
+		Optional<Rule> first = rules
 						.stream()
 						.filter(t -> t.getBarcodes().contains(item.getBarcode()))
 						.findFirst();
