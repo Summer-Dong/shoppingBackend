@@ -25,6 +25,7 @@ public class PaymentResult {
 		return sale;
 	}
 
+	@JsonSerialize(using = CustomDoubleSerialize.class)
 	public double getTotal() {
 		return total;
 	}
