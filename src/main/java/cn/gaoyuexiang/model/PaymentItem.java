@@ -46,4 +46,8 @@ public class PaymentItem {
 		result = 31 * result + (rule != null ? rule.hashCode() : 0);
 		return result;
 	}
+
+	public Rule getRule() {
+		return rule;
+	}
 }

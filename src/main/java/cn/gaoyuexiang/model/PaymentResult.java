@@ -1,5 +1,6 @@
 package cn.gaoyuexiang.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentResult {
@@ -54,5 +55,33 @@ public class PaymentResult {
 		temp = Double.doubleToLongBits(getTotal());
 		result = 31 * result + (int) (temp ^ (temp >>> 32));
 		return result;
+	}
+
+	public void setResultItems(List<ResultItem> resultItems) {
+		this.resultItems = resultItems;
+	}
+
+	public void setThreeForTwoItems(List<ThreeForTwoItem> threeForTwoItems) {
+		this.threeForTwoItems = threeForTwoItems;
+	}
+
+	public void setSale(double sale) {
+		this.sale = sale;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public void addResultItem(ResultItem resultItem) {
+		if (this.resultItems == null)
+			this.resultItems = new ArrayList<>();
+		this.resultItems.add(resultItem);
+	}
+
+	public void addThreeForTowItem(ThreeForTwoItem threeForTwoItem) {
+		if (this.threeForTwoItems == null)
+			this.threeForTwoItems = new ArrayList<>();
+		this.threeForTwoItems.add(threeForTwoItem);
 	}
 }
