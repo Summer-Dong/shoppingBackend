@@ -1,5 +1,8 @@
 package cn.gaoyuexiang.model;
 
+import cn.gaoyuexiang.serialize.custom.CustomDoubleSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +20,7 @@ public class PaymentResult {
 		return threeForTwoItems;
 	}
 
+	@JsonSerialize(using = CustomDoubleSerialize.class)
 	public double getSale() {
 		return sale;
 	}

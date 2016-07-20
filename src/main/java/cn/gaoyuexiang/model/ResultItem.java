@@ -1,5 +1,7 @@
 package cn.gaoyuexiang.model;
 
+import java.text.DecimalFormat;
+
 public class ResultItem {
 	private String name;
 	private String unit;
@@ -36,7 +38,8 @@ public class ResultItem {
 	}
 
 	public void setSave(double save) {
-		this.save = ",节省" + save + "(元)";
+		DecimalFormat df = new DecimalFormat("#.00");
+		this.save = ",节省" + df.format(save) + "(元)";
 	}
 
 	public void setTotal(double total) {
