@@ -5,18 +5,14 @@ public class ResultItem {
 	private String unit;
 	private int amount;
 	private double price;
+	private double total;
 	private String save;//判断参加95折的优惠，为0表示未参加
 
-	public ResultItem(String name,
-	                  String unit,
-	                  int amount,
-	                  double price,
-	                  String save) {
-		this.name = name;
-		this.unit = unit;
+	public ResultItem(Item item, int amount) {
+		this.name = item.getName();
+		this.unit = item.getUnit();
+		this.price = item.getPrice();
 		this.amount = amount;
-		this.price = price;
-		this.save = save;
 	}
 
 	public String getName() {
@@ -37,5 +33,17 @@ public class ResultItem {
 
 	public String getSave() {
 		return save;
+	}
+
+	public void setSave(String save) {
+		this.save = save;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public double getTotal() {
+		return total;
 	}
 }
