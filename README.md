@@ -3,7 +3,7 @@
 
 > 此作业前后端分离
 >
-> 后端代码地址：https://github.com/Summer-Dong/shoppingFrontend.git
+> 前端代码地址：https://github.com/Summer-Dong/shoppingFrontend.git
 >
 > 后端启动方法：在IDE中启动`cn.gaoyuexiang.StartBoot`类
 >
