@@ -7,6 +7,13 @@
 >
 > 后端启动方法：在IDE中启动`cn.gaoyuexiang.StartBoot`类
 >
+> 或命令行启动：
+> ```shell
+> $ gradle clean build
+> $ cd build/libs
+> $ java -jar shopping-1.0.jar cn.gaoyuexiang.StartBoot
+> ```
+>
 > 前端启动方法：将后端代码启动后，命令行进入项目根目录 -> grunt server
 
 
