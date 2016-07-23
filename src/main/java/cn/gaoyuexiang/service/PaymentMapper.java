@@ -43,9 +43,7 @@ public class PaymentMapper {
 
 		return paymentItemMap.values()
 						.stream()
-						.map(item -> item)
 						.collect(Collectors.toList());
-
 	}
 
 	private Rule getSaleByBarcode(List<Rule> rules, Item item) {
