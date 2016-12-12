@@ -18,6 +18,7 @@ dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.12'
   compile ("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
   testCompile ("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+  compile ("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
 }
 
 buildscript {
